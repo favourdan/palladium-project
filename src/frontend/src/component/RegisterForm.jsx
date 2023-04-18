@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { useState } from 'react'
 
 const BASE_URL = "http://localhost:8080/api/v1"
 const RegisterForm = () => {
@@ -19,8 +20,8 @@ const RegisterForm = () => {
             })
     }
 
-    const setFullName = (e) => setFormData({..., fullName: e.target.value })
-    const setUsername = (e) => setFormData({..., userName: e.target.value })
+    const setFullName = (e) => setFormData(prevState => { prevState})
+    const setUsername = (e) => setFormData(prevState => {prevState, userName: e.target.value })
     const setEmailAddress = (e) => setFormData({..., emailAddress: e.target.value })
     const setPhoneNumber = (e) => setFormData({..., phoneNumber: e.target.value })
 
