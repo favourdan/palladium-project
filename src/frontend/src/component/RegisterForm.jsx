@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 const BASE_URL = "http://localhost:8080/api/v1"
 const RegisterForm = () => {
-    const [username, setUsername] = useState("")
+    const [userName, setUsername] = useState("")
     const [fullName, setFullName] = useState("")
 
     const [emailAddress, setEmailAddress] = useState("")
